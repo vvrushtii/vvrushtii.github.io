@@ -56,6 +56,11 @@ h1, h2, h3, p { margin: 0; }
 /* ============ header / nav ============ */
 .top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px;
   max-width: var(--wrap); width: 100%; margin: 0 auto; padding: 18px 24px; }
+/* frosted bar behind the header once the page is scrolled, so content never shows through the logo */
+.top::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: -14px; left: 50%; width: 100vw; transform: translateX(-50%); pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  -webkit-mask-image: linear-gradient(#000 calc(100% - 14px), transparent); mask-image: linear-gradient(#000 calc(100% - 14px), transparent); }
+.top.scrolled::before { opacity: 1; }
 .logo { display: inline-flex; align-items: center; height: 52px; padding: 0 4px; transition: transform .5s var(--ease); }
 .logo .lg-sig { font-family: "Herr Von Muellerhoff", "Snell Roundhand", cursive; font-size: 54px; line-height: 1; color: var(--ink); padding-top: 6px; transition: color .3s; }
 .logo:hover { transform: translateY(-2px) rotate(-2deg); }

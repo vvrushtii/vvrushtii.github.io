@@ -430,6 +430,7 @@
   addEventListener("scroll", () => {
     const h = document.documentElement.scrollHeight - innerHeight;
     bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+    document.querySelector(".top").classList.toggle("scrolled", scrollY > 12);
   }, { passive: true });
 
   if (fine && !reduced) {
