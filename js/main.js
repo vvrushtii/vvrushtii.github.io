@@ -228,7 +228,7 @@
           <p>I've worked as a data analyst intern in legal analytics and as a marketing intern in AI &amp; digital strategy. Outside coursework I build projects end to end, from data collection to something deployed.</p>
           <p>I'm looking for an internship or entry-level role in data analysis, business analysis or data science.</p></div>
         <div class="row" style="margin-top:28px" data-reveal>${btn("Download résumé", LINKS.resume, "primary", DOWNLOAD, false).replace("<a ", "<a download ")}${btn("Let's talk", "#/contact", "", ARROW_R, false)}</div></div>
-      <div class="portrait" data-reveal aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
+      <div class="portrait-wrap" data-reveal><div class="portrait photo"><img src="assets/img/vrushti.jpg" width="640" height="672" decoding="async" alt="Portrait of Vrushti Patel"></div><span class="tag">Gandhinagar, India</span></div>
     </div>
 
     <h2 class="sub" data-reveal>Experience</h2>

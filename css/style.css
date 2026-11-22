@@ -224,6 +224,20 @@ main { flex: 1; width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 24
 .chip.solid { background: var(--surface); color: var(--ink); transition: all .3s var(--ease); } .chip.solid:hover { background: var(--ink); color: var(--bg); transform: translateY(-2px); }
 h2.sub { font: 400 clamp(30px, 4vw, 44px)/1.1 var(--serif); letter-spacing: -.02em; margin: 80px 0 0; }
 
+
+/* photo portrait on the About page */
+.portrait-wrap { position: relative; isolation: isolate; }
+.portrait-wrap::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border-radius: 30px; z-index: -1;
+  background: linear-gradient(145deg, var(--accent), #ffb36b 70%, #ffe0b8); opacity: .95; transition: transform .7s var(--ease); }
+.portrait-wrap:hover::before { transform: translate(6px, 6px); }
+.portrait.photo { background: var(--surface-2); display: block; }
+.portrait.photo::after { background: linear-gradient(180deg, transparent 70%, rgba(0, 0, 0, .18)); }
+.portrait.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform 1.1s var(--ease); }
+.portrait-wrap:hover .portrait.photo img { transform: scale(1.04); }
+.portrait-wrap .tag { position: absolute; left: 16px; bottom: 16px; padding: 7px 14px; border-radius: 999px; font: 500 12.5px/1 var(--mono);
+  background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--line); }
+@media (max-width: 900px) { .portrait-wrap { order: -1; max-width: 300px; margin-right: 18px; margin-top: 12px; } .portrait-wrap::before { inset: 14px -14px -14px 14px; } }
+
 /* ============ resume / contact ============ */
 .resume-bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .doc { width: 100%; height: min(82vh, 1100px); border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
