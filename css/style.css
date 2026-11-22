@@ -56,11 +56,10 @@ h1, h2, h3, p { margin: 0; }
 /* ============ header / nav ============ */
 .top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px;
   max-width: var(--wrap); width: 100%; margin: 0 auto; padding: 18px 24px; }
-.logo { position: relative; display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--accent); transition: transform .5s var(--ease), background .3s; }
-.logo::after { content: ""; position: absolute; inset: 4px; border-radius: 50%; border: 1px solid var(--line-2, var(--line)); }
-.logo .mono-v { grid-area: 1 / 1; font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 600; font-size: 34px; line-height: 1; color: var(--ink); transform: translate(-6px, -2px); }
-.logo .mono-p { grid-area: 1 / 1; font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 600; font-size: 24px; line-height: 1; color: var(--accent); transform: translate(8px, 6px); }
-.logo:hover { transform: rotate(-8deg) scale(1.06); background: var(--accent-soft); }
+.logo { display: inline-flex; align-items: center; height: 52px; padding: 0 4px; transition: transform .5s var(--ease); }
+.logo .lg-sig { font-family: "Mrs Saint Delafield", "Snell Roundhand", cursive; font-size: 50px; line-height: 1; color: var(--ink); padding-top: 6px; transition: color .3s; }
+.logo:hover { transform: translateY(-2px) rotate(-2deg); }
+.logo:hover .lg-sig { color: var(--accent); }
 .nav { position: relative; display: flex; gap: 2px; padding: 5px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 78%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .nav a { position: relative; z-index: 1; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted); transition: color .25s; }
