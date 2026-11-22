@@ -83,7 +83,7 @@
     return `
     <section class="hero">
       <div>
-        <span class="status"><i></i> Open to internships &amp; entry-level roles</span>
+        <span class="status"><i></i> Open to new opportunities</span>
         <h1><span class="mask"><span>Vrushti</span></span><span class="mask"><span><em>Patel</em></span></span></h1>
         <div class="roles"><span>Data science student. I</span>
           <span class="swap" id="swap"><span class="on">analyse data.</span><span>build models.</span><span>write SQL.</span><span>ship dashboards.</span></span>
@@ -112,7 +112,7 @@
     </section>
 
     <section class="cta-band" data-reveal>
-      <h2>Looking for an intern who <em>measures</em> their own work?</h2>
+      <h2>Want someone who <em>measures</em> their own work?</h2>
       ${btn("Get in touch", "#/contact", "", ARROW_R, false)}
     </section>`;
   }
@@ -226,7 +226,7 @@
         <div class="prose" data-reveal>
           <p>I'm a final-year B.Sc. Computer Science student at UIT, Karnavati University, specialising in Data Science. I like taking messy data, finding what it says, and turning that into something clear enough to act on.</p>
           <p>I've worked as a data analyst intern in legal analytics and as a marketing intern in AI &amp; digital strategy. Outside coursework I build projects end to end, from data collection to something deployed.</p>
-          <p>I'm looking for an internship or entry-level role in data analysis, business analysis or data science.</p></div>
+          <p>I'm always keen on a new challenge, so if something here looks useful, say hello.</p></div>
         <div class="row" style="margin-top:28px" data-reveal>${btn("Download résumé", LINKS.resume, "primary", DOWNLOAD, false).replace("<a ", "<a download ")}${btn("Let's talk", "#/contact", "", ARROW_R, false)}</div></div>
       <div class="portrait-wrap" data-reveal><div class="portrait photo"><img src="assets/img/vrushti.jpg" width="640" height="672" decoding="async" alt="Portrait of Vrushti Patel"></div><span class="tag">Gandhinagar, India</span></div>
     </div>
@@ -272,7 +272,7 @@
     const mail = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>`;
     return `
     <div class="page-head"><span class="eyebrow">Contact</span><h1 class="title">Let's <em>talk</em>.</h1>
-      <p class="lead">I'm open to internships and entry-level roles in data analysis, business analysis and data science. The quickest way to reach me is email.</p></div>
+      <p class="lead">I'm open to new opportunities and happy to talk about anything tech. The quickest way to reach me is email.</p></div>
     <div class="contact-grid">
       <a class="contact-card" href="mailto:${EMAIL}" data-reveal><small>Email</small><strong class="plain">${EMAIL}${mail}</strong></a>
       <a class="contact-card" href="${LINKS.linkedin}" target="_blank" rel="noopener" data-reveal><small>LinkedIn</small><strong class="plain">/in/vrushtipatel14${mail}</strong></a>

@@ -56,12 +56,11 @@ h1, h2, h3, p { margin: 0; }
 /* ============ header / nav ============ */
 .top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px;
   max-width: var(--wrap); width: 100%; margin: 0 auto; padding: 18px 24px; }
-.logo { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1; padding-top: 2px; }
-.logo .lg-script { font-family: "Pinyon Script", "Snell Roundhand", cursive; font-size: 34px; line-height: .9; color: var(--ink); letter-spacing: 0; }
-.logo .lg-sub { font-family: "Cormorant Garamond", var(--serif); font-weight: 600; font-size: 11px; letter-spacing: .5em; text-transform: uppercase; color: var(--accent); margin: 3px 0 0 3px;
-  display: inline-flex; align-items: center; gap: 8px; }
-.logo .lg-sub::before { content: ""; width: 18px; height: 1px; background: var(--accent); opacity: .7; transition: width .35s ease; }
-.logo:hover .lg-sub::before { width: 30px; }
+.logo { position: relative; display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--accent); transition: transform .5s var(--ease), background .3s; }
+.logo::after { content: ""; position: absolute; inset: 4px; border-radius: 50%; border: 1px solid var(--line-2, var(--line)); }
+.logo .mono-v { grid-area: 1 / 1; font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 600; font-size: 34px; line-height: 1; color: var(--ink); transform: translate(-6px, -2px); }
+.logo .mono-p { grid-area: 1 / 1; font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 600; font-size: 24px; line-height: 1; color: var(--accent); transform: translate(8px, 6px); }
+.logo:hover { transform: rotate(-8deg) scale(1.06); background: var(--accent-soft); }
 .nav { position: relative; display: flex; gap: 2px; padding: 5px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 78%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .nav a { position: relative; z-index: 1; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted); transition: color .25s; }
