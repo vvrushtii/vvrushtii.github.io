@@ -56,8 +56,12 @@ h1, h2, h3, p { margin: 0; }
 /* ============ header / nav ============ */
 .top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px;
   max-width: var(--wrap); width: 100%; margin: 0 auto; padding: 18px 24px; }
-.logo { font: italic 400 28px/1 var(--serif); display: inline-flex; letter-spacing: -.02em; }
-.logo em { color: var(--accent); margin-left: 1px; }
+.logo { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1; padding-top: 2px; }
+.logo .lg-script { font-family: "Pinyon Script", "Snell Roundhand", cursive; font-size: 34px; line-height: .9; color: var(--ink); letter-spacing: 0; }
+.logo .lg-sub { font-family: "Cormorant Garamond", var(--serif); font-weight: 600; font-size: 11px; letter-spacing: .5em; text-transform: uppercase; color: var(--accent); margin: 3px 0 0 3px;
+  display: inline-flex; align-items: center; gap: 8px; }
+.logo .lg-sub::before { content: ""; width: 18px; height: 1px; background: var(--accent); opacity: .7; transition: width .35s ease; }
+.logo:hover .lg-sub::before { width: 30px; }
 .nav { position: relative; display: flex; gap: 2px; padding: 5px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 78%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); box-shadow: var(--shadow); }
 .nav a { position: relative; z-index: 1; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted); transition: color .25s; }
@@ -232,7 +236,7 @@ h2.sub { font: 400 clamp(30px, 4vw, 44px)/1.1 var(--serif); letter-spacing: -.02
 .portrait-wrap:hover::before { transform: translate(6px, 6px); }
 .portrait.photo { background: var(--surface-2); display: block; }
 .portrait.photo::after { background: linear-gradient(180deg, transparent 70%, rgba(0, 0, 0, .18)); }
-.portrait.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform 1.1s var(--ease); }
+.portrait.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transition: transform 1.1s var(--ease); }
 .portrait-wrap:hover .portrait.photo img { transform: scale(1.04); }
 .portrait-wrap .tag { position: absolute; left: 16px; bottom: 16px; padding: 7px 14px; border-radius: 999px; font: 500 12.5px/1 var(--mono);
   background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--line); }
