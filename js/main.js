@@ -260,7 +260,7 @@
 
   function resume() {
     return `
-    <div class="page-head"><span class="eyebrow">Résumé</span><h1 class="title">One page. <em>Plain and clear.</em></h1></div>
+    <div class="page-head"><span class="eyebrow">Download</span><h1 class="title">Résumé</h1></div>
     <div class="resume-bar" data-reveal>
       <span class="chip">PDF · 1 page · updated Nov 2026</span>
       <div class="row">${btn("Open in new tab", LINKS.resume, "", ARROW)}${btn("Download PDF", LINKS.resume, "primary", DOWNLOAD, false).replace("<a ", "<a download ")}</div>
